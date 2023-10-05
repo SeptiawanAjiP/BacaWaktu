@@ -2,6 +2,7 @@ package com.dewakoding.bacawaktuapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import com.dewakoding.bacawaktu.BacaWaktu
 import java.util.Date
 
@@ -10,11 +11,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val dateTime = Date() // Anda bisa mengganti ini dengan tanggal dan waktu yang sesuai
-        val humanReadable = BacaWaktu.formatToHumanReadable(dateTime)
-        val humanReadableAgo = BacaWaktu.formatToHumanReadableAgo(dateTime)
+        Log.d("TAG", BacaWaktu.formatStringKeSelisihWaktu("2023-10-06 02:00:00"))
+        Log.d("TAG", BacaWaktu.formatStringKeSelisihWaktu("2023-10-05 08:00:00"))
+        Log.d("TAG", BacaWaktu.formatStringKeWaktuIndonesia("2023-10-01"))
+        Log.d("TAG", BacaWaktu.formatStringKeWaktuIndonesia("2023-10-17"))
 
-        println("Waktu Normal: $humanReadable")
-        println("Waktu 'X waktu yang lalu': $humanReadableAgo")
     }
 }
