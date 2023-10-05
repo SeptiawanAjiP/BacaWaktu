@@ -9,16 +9,12 @@ BacaWaktu adalah sebuah library sederhana untuk memformat waktu dalam bahasa Ind
 
 ## Penggunaan
 
-### Mengubah Format Tanggal dan Waktu ke Bahasa Indonesia
+Berikut contoh penggunaan library BacaWaktu
 
 ```kotlin
-val dateTimeString = "2023-10-04 14:30:00"
-val formattedDateTime = BacaWaktu.formatStringKeWaktuIndonesia(dateTimeString)
-println(formattedDateTime) // Contoh hasil: "Selasa, 04 Oktober 2023 - 14:30 WIB"
-```
-### Menghitung Selisih Waktu
-```kotlin
-val dateTimeString = "2023-10-04 14:30:00"
-val formattedTimeDiff = BacaWaktu.formatStringKeSelisihWaktu(dateTimeString)
-println(formattedTimeDiff) // Contoh hasil: "Besok"
+Log.d("TAG", BacaWaktu.formatStringKeSelisihWaktu("2023-10-06 02:00:00")) // output : 10 jam lagi
+Log.d("TAG", BacaWaktu.formatStringKeSelisihWaktu("2023-10-03")) // output :2 hari yang lalu
+Log.d("TAG", BacaWaktu.formatStringKeWaktuIndonesia("2023-10-01 12:42:00")) // output : Minggu, 1 Oktober 2023 - 12:42 WIB
+Log.d("TAG", BacaWaktu.formatStringKeWaktuIndonesia("2023-10-17")) // output : Selasa, 17 Oktober 2023
+
 ```
