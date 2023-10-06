@@ -7,6 +7,25 @@ BacaWaktu adalah sebuah library sederhana untuk memformat waktu dalam bahasa Ind
 - Mengubah format tanggal dan waktu menjadi format bahasa Indonesia.
 - Menghitung selisih waktu dalam format yang mudah dimengerti, seperti "Besok," "x hari yang lalu," atau "x jam yang lalu."
 
+## Cara Install
+Tambahkan code berikut didalam file settings.gradle
+
+```bash
+dependencyResolutionManagement {
+    repositories {
+        ....
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+lalu tambahkan code tersebut di file build.gradle (Module)
+```bash
+dependencies {
+    implementation 'com.github.SeptiawanAjiP:BacaWaktu:Tag'
+}
+```
+ganti Tag dengan versi terakhir.
+
 ## Penggunaan
 
 Berikut contoh penggunaan library BacaWaktu
